@@ -40,8 +40,10 @@ const css = async () => {
         quietDeps: true,
     });
 
+    const postcss = require('postcss');
+    let postcssPlugins = [ require('tailwindcss') ];
     if (production)
-        output = await require('postcss')([
+        postcssPlugins = [
             require('postcss-sort-media-queries')({
                 sort: 'desktop-first'
             }),
@@ -50,10 +52,14 @@ const css = async () => {
                 html: [ 'dist/**/*.html' ],
                 ignore: [ '*--*', 'hidden' ]
             }),
+            require('tailwindcss'),
             require('autoprefixer'),
             require('postcss-flexbugs-fixes'),
             require('cssnano'),
-        ]).process(output.css, {
+        ];
+
+    output = await postcss(postcssPlugins)
+        .process(output.css, {
             from: inFile,
             to: outFile,
             map: {

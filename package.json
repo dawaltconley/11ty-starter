@@ -29,7 +29,6 @@
     "gulp": "^4.0.2",
     "js-yaml": "^4.1.0",
     "markdown-it": "^12.3.2",
-    "normalize.css": "^8.0.1",
     "nunjucks-do": "github:dawaltconley/nunjucks-do#131bfeafebfe9bbc38c9f713405458759622c253",
     "postcss": "^8.4.12",
     "postcss-flexbugs-fixes": "^5.0.2",
@@ -39,7 +38,8 @@
     "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.50.1",
     "sass-themes": "^0.2.0",
-    "scss-properties": "github:dawaltconley/scss-properties#6c5a41e1d2892dfde3366c258d35edc4dcc48ccf"
+    "scss-properties": "github:dawaltconley/scss-properties#6c5a41e1d2892dfde3366c258d35edc4dcc48ccf",
+    "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
     "browser-sync": "^2.27.9",
