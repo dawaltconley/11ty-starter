@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% set bodyClass = 'parallax' %}
+
+{% block body %}
+  <div class="flex-col flex-none parallax__page">
+    {% block header %}
+      {% header header, class="wrapper-padding front" %}
+    {% endblock %}
+
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+
+    {% block footer %}
+      {% include 'footer.html' %}
+    {% endblock %}
+  </div>
+{% endblock %}
