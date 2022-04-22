@@ -3,7 +3,7 @@
 
   {% include 'head.html' %}
 
-  <body class="{{ bodyClass | default('flex-col flex-none screen-height-min') }}" {%- if itemtype %} itemscope itemtype="{{ itemtype }}" {% endif %}>
+<body class="{{ bodyClass | default('flex flex-col min-h-screen') }}" {%- if itemtype %} itemscope itemtype="{{ itemtype }}" {% endif %}>
     {% block body %}
 
       {% block header %}

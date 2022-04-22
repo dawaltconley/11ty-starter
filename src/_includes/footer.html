@@ -1,20 +1,19 @@
-<footer class="dark margin-auto-t border-basic-t border-light">
+<footer class="dark mt-auto border-t border-light">
 
-  <div class="content-wrapper padding-m text-center">
+  <div class="container p-8 text-center">
 
-    <div class="margin-s-b media-icon-basic media-icon-list fs-icon h-rhythm-s t-default">
+    <div class="mb-4 media-icon-basic media-icon-list text-2xl space-x-4 duration-300">
       {% icons site.contact %}
     </div>
 
-    <div class="flex-row-gt-laptop flex-justify-center fs-smaller no-kerning margin-auto-h">
-      <!-- need to disable font kerning due to an extremely weird Safari bug forcing a line break on my name. only happens with a hyphen-C, Monserrat font, and font kerning enabled -->
-      <div class="padding-xs-h border-basic-r border-0-lt-laptop">
-        <span class="avoid-wrap">Copyright &copy; <time datetime="{{ site.copyright.date | date }}">{{ site.copyright.date | date('YYYY') }}</time></span>
-        <span class="avoid-wrap">{{ site.copyright.owner }}</span>
+    <div class="mx-auto xl:flex flex-row justify-center text-sm">
+      <div class="py-0 xl:border-r">
+        <span class="whitespace-nowrap">Copyright &copy; <time datetime="{{ site.copyright.date | date }}">{{ site.copyright.date | date('YYYY') }}</time></span>
+        <span class="whitespace-nowrap">{{ site.copyright.owner }}</span>
       </div>
-      <div class="padding-xs-h">
-        <span class="avoid-wrap">Site design by</span>
-        <a href="https://github.com/dawaltconley" class="subtle-link avoid-wrap" target="_blank">
+      <div class="py-0">
+        <span class="whitespace-nowrap">Site design by</span>
+        <a href="https://github.com/dawaltconley" class="subtle-link whitespace-nowrap" target="_blank">
           <i class="fab fa-github fa-fw">&nbsp;</i>Dylan Awalt-Conley
         </a>
       </div>
