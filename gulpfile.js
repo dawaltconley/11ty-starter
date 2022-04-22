@@ -59,6 +59,7 @@ const css = async (recompile=true) => {
                 ignore: [ '*--*', 'hidden' ]
             }),
             require('tailwindcss'),
+            require('postcss-aspect-ratio-polyfill'),
             require('autoprefixer'),
             require('postcss-flexbugs-fixes'),
             require('cssnano'),

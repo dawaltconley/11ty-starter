@@ -31,6 +31,7 @@
     "markdown-it": "^12.3.2",
     "nunjucks-do": "github:dawaltconley/nunjucks-do#131bfeafebfe9bbc38c9f713405458759622c253",
     "postcss": "^8.4.12",
+    "postcss-aspect-ratio-polyfill": "^2.0.0",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-sort-media-queries": "^4.2.1",
     "postcss-uncss": "^0.17.0",
