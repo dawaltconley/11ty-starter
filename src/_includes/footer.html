@@ -1,0 +1,25 @@
+<footer class="dark margin-auto-t border-basic-t border-light">
+
+  <div class="content-wrapper padding-m text-center">
+
+    <div class="margin-s-b media-icon-basic media-icon-list fs-icon h-rhythm-s t-default">
+      {% icons site.contact %}
+    </div>
+
+    <div class="flex-row-gt-laptop flex-justify-center fs-smaller no-kerning margin-auto-h">
+      <!-- need to disable font kerning due to an extremely weird Safari bug forcing a line break on my name. only happens with a hyphen-C, Monserrat font, and font kerning enabled -->
+      <div class="padding-xs-h border-basic-r border-0-lt-laptop">
+        <span class="avoid-wrap">Copyright &copy; <time datetime="{{ site.copyright.date | date }}">{{ site.copyright.date | date('YYYY') }}</time></span>
+        <span class="avoid-wrap">{{ site.copyright.owner }}</span>
+      </div>
+      <div class="padding-xs-h">
+        <span class="avoid-wrap">Site design by</span>
+        <a href="https://github.com/dawaltconley" class="subtle-link avoid-wrap" target="_blank">
+          <i class="fab fa-github fa-fw">&nbsp;</i>Dylan Awalt-Conley
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</footer>

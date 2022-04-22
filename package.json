@@ -1,0 +1,52 @@
+{
+  "name": "@dawaltconley/starter",
+  "version": "0.1.0",
+  "description": "A starter website using Eleventy",
+  "scripts": {
+    "build": "npx gulp build",
+    "build:prod": "NODE_ENV=production npm run build",
+    "serve": "npx gulp serve",
+    "serve:prod": "NODE_ENV=production npm run serve",
+    "test": "nvm use; rm -r _site; NODE_ENV=production npm run build"
+  },
+  "author": "Dylan Awalt-Conley",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@dawaltconley/header-basic": "^0.5.0",
+    "@dawaltconley/media-icons": "^0.5.1",
+    "@dawaltconley/sass": "^0.4.2",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^21.1.0",
+    "@rollup/plugin-node-resolve": "^13.2.1",
+    "autoprefixer": "^10.4.4",
+    "cssnano": "^5.1.7",
+    "dayjs": "^1.11.1",
+    "fast-lorem-ipsum": "^1.2.0",
+    "gray-matter": "^4.0.3",
+    "gulp": "^4.0.2",
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^12.3.2",
+    "normalize.css": "^8.0.1",
+    "nunjucks-do": "github:dawaltconley/nunjucks-do#131bfeafebfe9bbc38c9f713405458759622c253",
+    "postcss": "^8.4.12",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-sort-media-queries": "^4.2.1",
+    "postcss-uncss": "^0.17.0",
+    "rollup": "^2.70.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.50.1",
+    "sass-themes": "^0.2.0",
+    "scss-properties": "github:dawaltconley/scss-properties#6c5a41e1d2892dfde3366c258d35edc4dcc48ccf"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.9",
+    "eslint": "^8.13.0",
+    "stylelint": "^14.7.1",
+    "stylelint-config-recommended": "^7.0.0",
+    "stylelint-config-recommended-scss": "^6.0.0",
+    "stylelint-scss": "^4.2.0"
+  }
+}

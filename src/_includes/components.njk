@@ -1,0 +1,12 @@
+{% macro spinner(size='2') %}
+  <div class="dark fill-parent flex-col flex-center">
+    <i class="fa fa-spinner fa-pulse fa-{{ size or '2' }}x" aria-hidden="true"></i>
+  </div>
+{% endmacro %}
+
+{% macro iframe(src, title='', size=undefined) -%}
+  <div class="aspect-16-9 expand-children">
+    {{ spinner(size) }}
+    <iframe class="full-size" src="{{ src | safe }}" title="{{ title }}" allowfullscreen></iframe>
+  </div>
+{%- endmacro %}

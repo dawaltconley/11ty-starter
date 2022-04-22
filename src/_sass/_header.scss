@@ -1,0 +1,18 @@
+@use '@dawaltconley/header-basic';
+@use '@dawaltconley/sass/config';
+
+.header {
+    @include header-basic.styles(
+        $color: var(--theme-bg) var(--theme-text),
+        // $color: pink var(--theme-text),
+        $height: 56px,
+    );
+
+    &__link {
+        padding: 0 config.spacing(s);
+    }
+
+    &__logo {
+        padding: 10px config.spacing(s);
+    }
+}

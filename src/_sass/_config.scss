@@ -1,0 +1,45 @@
+@use '@dawaltconley/sass/config' with (
+    $base-font-family: 'Montserrat' sans-serif,
+    $base-font-weight: 400,
+    $base-line-height: 1.4,
+    $base-line-length: 72ch,
+
+    $heading-sizes: 2em 2.4em 1.5em 1.2em,
+    $heading-font-family: 'Montserrat Alternates',
+    $heading-font-weight: 500,
+
+    $font-sizes: (
+        'base': 1.25rem,
+        'icon': 1.5rem,
+        'small': 0.6em,
+        'smaller': 0.8em,
+        'larger': 1.2em,
+    ),
+    $sizes: (
+        'full': 100%,
+        'half': 50%,
+        'screen': 100vw 100vh,
+        'no': 0,
+        'auto': auto,
+    ),
+    $spacings: (
+        'auto': auto,
+        '0': 0,
+        'xs': 10px,
+        's': 15px,
+        'm': 30px,
+        'l': 60px,
+        'full': 100%,
+    ),
+    $transitions: (
+        'fast': .15s,
+        'default': .3s,
+        'slow': 1s,
+    ),
+    $bp: (
+        'desktop': 1440px,
+        'laptop': 1280px,
+        'tablet': 1024px,
+        'mobile': 600px,
+    ),
+);

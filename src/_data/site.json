@@ -1,0 +1,17 @@
+{
+  "title": "Starter Site",
+  "description": "A starter website using Eleventy",
+  "keywords": [],
+  "url": "",
+  "ogImage": "",
+  "copyright": {
+    "date": "2022-04-22",
+    "owner": "Dylan Awalt-Conley"
+  },
+  "contact": [
+    {
+      "type": "email",
+      "link": "web@dylan.ac"
+    }
+  ]
+}

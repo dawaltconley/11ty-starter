@@ -1,0 +1,17 @@
+@use 'sass-themes';
+
+body, .light {
+    @include sass-themes.create(
+        $text:  #111,
+        $bg:    white,
+        $brand: royalblue
+    );
+}
+
+.dark {
+    @include sass-themes.create(
+        $text:  white,
+        $bg:    #111,
+        $brand: royalblue
+    );
+}

@@ -1,0 +1,11 @@
+links:
+  - text: News
+    page: '/news/'
+  - text: Team
+    page: '/team/'
+icons:
+  - open: '<i class="far fa-fw fa-bars"></i>'
+  - close: '<i class="far fa-fw fa-times"></i>'
+logo:
+  src: '/assets/logo/logo-1.svg'
+  alt: ACME

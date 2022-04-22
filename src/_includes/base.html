@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include 'head.html' %}
+
+  <body class="{{ bodyClass | default('flex-col flex-none screen-height-min') }}" {%- if itemtype %} itemscope itemtype="{{ itemtype }}" {% endif %}>
+    {% block body %}
+
+      {% block header %}
+        {% header header, class="wrapper-padding front" %}
+      {% endblock %}
+
+      {% block content %}
+        {{ content | safe }}
+      {% endblock %}
+
+      {% block footer %}
+        {% include 'footer.html' %}
+      {% endblock %}
+
+    {% endblock %}
+    {% include 'scripts.html' %}
+  </body>
+
+</html>
