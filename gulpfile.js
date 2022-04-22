@@ -29,16 +29,22 @@ exports.eleventy = eleventyBuild;
  * CSS
  */
 
-const css = async () => {
+let compiledScss; // hold in memory to avoid scss recompiling
+
+const css = async (recompile=true) => {
     let inFile = 'src/css/main.scss';
     let outFile = 'dist/css/main.css';
     let mapFile = outFile + '.map';
     let mkOutDir = mkdir(path.dirname(outFile));
 
-    let output = await sass.compileAsync(inFile, {
-        loadPaths: ['node_modules', 'src/_sass'],
-        quietDeps: true,
-    });
+    let output = compiledScss;
+    if (recompile) {
+        output = await sass.compileAsync(inFile, {
+            loadPaths: ['node_modules', 'src/_sass'],
+            quietDeps: true,
+        });
+        compiledScss = output;
+    }
 
     const postcss = require('postcss');
     let postcssPlugins = [ require('tailwindcss') ];
@@ -62,9 +68,7 @@ const css = async () => {
         .process(output.css, {
             from: inFile,
             to: outFile,
-            map: {
-                inline: false
-            }
+            map: { inline: false },
         });
 
     await mkOutDir;
@@ -75,7 +79,10 @@ const css = async () => {
     return Promise.all(tasks);
 };
 
-const cssWatch = series(css, () => gulp.watch('src/{css,_sass}/**/*.scss', css));
+const { content:tailwindContent } = require('./tailwind.config.js');
+
+const scssWatch = series(css, () => gulp.watch('src/{css,_sass}/**/*.scss', css));
+const postcssWatch = series(css, () => gulp.watch(tailwindContent, () => css(false)));
 
 exports.css = css;
 
@@ -127,5 +134,5 @@ if (production) {
     exports.serve = series(exports.build, serve);
 } else {
     exports.build = parallel(eleventyBuild, css, js);
-    exports.serve = parallel(eleventyWatch, jsWatch, cssWatch, serve);
+    exports.serve = parallel(eleventyWatch, jsWatch, scssWatch, postcssWatch, serve);
 }
