@@ -4,7 +4,6 @@
 .header {
     @include header-basic.styles(
         $color: var(--theme-bg) var(--theme-text),
-        // $color: pink var(--theme-text),
         $height: 56px,
     );
 
